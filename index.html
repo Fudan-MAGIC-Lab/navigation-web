@@ -1,1 +1,524 @@
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="NavigationDrive">
+  <meta name="keywords" content="Autonomous Driving, End-to-End Driving">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    NavigationDrive
+  </title>
+
+  <!-- <link rel="apple-touch-icon" sizes="57x57"s
+    href="./static/images/cr7_frame5_crop.png" />
+
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png"
+    sizes="196x196" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png"
+    sizes="192x192" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png" sizes="128x128" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./static/images/cr7_frame5_crop.png" sizes="16x16" />
+
+  <link rel="mask-icon" href="//www-media.stanford.edu/assets/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <meta name="application-name" content="Stanford University" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="//www-media.stanford.edu/assets/favicon/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="//www-media.stanford.edu/assets/favicon/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="//www-media.stanford.edu/assets/favicon/mstile-150x150.png" />
+  <meta name="msapplication-square310x310logo" content="//www-media.stanford.edu/assets/favicon/mstile-310x310.png" /> -->
+
+  <link rel="icon" href="./static/images/icon.png">
+  <!-- Google Analytics 统计代码已注释
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ38WT2YPD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QZ38WT2YPD');
+  </script>
+  -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://kit.fontawesome.com/19914a84eb.js" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- <meta property="og:image" content="https://agile.human2humanoid.com/static/images/asap-preview-gif-480P.gif" /> -->
+  <!-- <meta property="og:image:secure" content="https://agile.human2humanoid.com/static/images/asap-preview-gif-480P.gif" /> -->
+</head>
+
+<section class="hero is-link is-fullheight video">
+  <!-- create a video background -->
+  <div class="hero-video" style="background-color: #1E90FF;">
+    <!-- 原视频背景代码已注释
+    <video playsinline autoplay muted loop>
+      <source src="./static/videos/hero_static.mp4" type="video/mp4">
+    </video>
+    -->
+  </div>
+  <div class="hero-video is-hidden-tablet is-inline-block-mobile"
+    style="height: 154.28571428vw; width: 100%; min-width:64.81481481vh;min-height:100%; background-color: #1E90FF;">
+    <!-- 原视频背景代码已注释
+    <video playsinline autoplay muted loop>
+      <source src=" ./static/videos/hero_static.mp4" type="video/mp4">
+    </video>
+    -->
+  </div>
+  <div class="overlay"></div>
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head is-hidden-mobile">
+    <header class="navbar">
+      <div class="container is-size-5">
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item pl-4 pr-4" href="./static/NavigationDrive.pdf">  <!-- TODO:update -->
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/pdf.svg" alt="PDF" />
+              </span>
+              <span>Paper</span>
+            </a>
+            <a class="navbar-item  pl-4 pr-4" href="https://zhihua-hua.github.io/NavigationDrive-web/">  <!-- TODO:update arxiv link -->
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/arxiv.svg" alt="ArXiv" />
+              </span>
+              <span>arXiv</span> </a>
+            <a href="https://youtu.be/OfsvJ5-Fyzg" class="navbar-item  pl-4 pr-4"> <!-- TODO:update -->
+              <span class="icon" style="margin-right:5px;">
+                <img src="./static/images/youtube.svg" alt="Youtube" />
+              </span>
+              <span>Video</span> </a>
+            <span class="navbar-item  pl-4 pr-4">
+              <a href="https://github.com/Zhihua-Hua/NavigationDrive/" class="button is-inverted is-large">  <!-- TODO:update -->
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <!-- <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 6rem;">
+        FALCON
+      </h1> -->
+      <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 4rem;">
+        Unveiling the Surprising Efficacy of Navigation Understanding in End-to-End Autonomous Driving
+      </h1>
+      <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 2rem; opacity: 80%;">
+        <!-- #TODO (Robotics: Science and Systems (RSS) 2025) -->
+      </h1>
+      <!--  <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.5rem; opacity: 80%;">
+        <b>Spotlight</b> WCBM Workshop CoRL 2024
+      </h1>
+      <h1 class="is-2 is-italic is-size-4-mobile" style="font-size: 1.5rem; opacity: 80%;">
+        X-Embodiment Workshop CoRL 2024
+      </h1> -->
+      <div class="column has-text-centered is-hidden-tablet">
+        <div class="publication-links">
+          <!-- PDF Link. -->
+          <span class="link-block">
+            <a href="./static/NavigationDrive.pdf" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/pdf.svg" alt="PDF" />
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="https://zhihua-hua.github.io/NavigationDrive-web/" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/arxiv.svg" alt="ArXiv" />
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+          <!-- Video Link. -->
+          <span class="link-block">
+            <a href="https://zhihua-hua.github.io/NavigationDrive-web/" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <img src="./static/images/youtube.svg" alt="Youtube" />
+              </span>
+              <span>Video</span>
+            </a>
+          </span>
+          <!-- Code Link. -->
+          <span class="link-block">
+            <a href="https://github.com/Zhihua-Hua/NavigationDrive/"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <!-- <div class="hero-foot is-hidden-mobile">
+    <nav class="tabs is-boxed is-fullwidth is-size-4">
+      <ul>
+        <li><a href="#agile-skills">Agile Whole-Body Skills</a></li>
+        <li><a href="#before-after-asap"></a>Before/After ASAP Fine-tuning</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#method">Method</a></li>
+      </ul>
+    </nav>
+  </div> -->
+</section>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Unveiling the Surprising Efficacy of Navigation Understanding in End-to-End Autonomous Driving</h1>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block" style="font-size: 95%;">
+              <a href="https://github.com/Zhihua-Hua">Zhihua Hua</a>&nbsp;&nbsp;
+              <a href="https://github.com/wjl2244">Junli Wang</a>&nbsp;&nbsp;
+              <a href="https://github.com/Philipflyg">Pengfei Li</a>&nbsp;&nbsp;
+              <a href="#">Qihao Jin</a>&nbsp;&nbsp;
+              <br>
+              <a href="#">Kehua Sheng</a>&nbsp;&nbsp;
+              <a href="#">Yilun Chen</a>&nbsp;&nbsp;
+              <a href="#">Zhongxue Gan</a>&nbsp;&nbsp;
+              <a href="#">WenChao Ding</a>&nbsp;&nbsp;
+            </span>
+            <br>
+            <br>
+
+            <span class="author-block" style="font-size: 95%;">
+              <b>Fudan University &nbsp; | &nbsp; Didi Chuxing &nbsp; | &nbsp; AIR, Tsinghua University &nbsp; | &nbsp; CASIA</b>
+            </span>
+          </div>
+
+          <!-- <div class="column">
+            <image src="./static/images/ip.png" style="width: 60%;"></image>
+          </div> -->
+
+
+          <div class="is-size-4 publication-authors", style="margin-bottom: 0.5cm;">
+            <!-- #TODO (RSS 2025) -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <!-- TODO:update -->
+                <a href="./static/NavigationDrive.pdf"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>PDF</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <!-- TODO:update -->
+                <a href="https://zhihua-hua.github.io/NavigationDrive-web/"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>ArXiv (TODO)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <!-- TODO:update -->
+                <a href="https://zhihua-hua.github.io/NavigationDrive-web/"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (TODO)</span>
+                </a>
+              </span>
+              <!-- Datasets Link. -->
+              <!-- <span class="link-block">
+                <a href="https://cmu.box.com/s/kmayzq5ax2rxvwn97s0hzz0aq5vws9io" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Datasets</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <!-- TODO:update -->
+                <a href="https://github.com/Zhihua-Hua/NavigationDrive/" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Private)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
+          Carla Simulation Demo(TODO)
+        </h2>      
+        <tr>
+          <td>
+            <div class="columns">
+              <div class="column has-text-centered">
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/autonomy_unmask.mov" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
+          More Forceful Loco-Manipulation Tasks via <em>Teleoperation</em>
+        </h2>
+        <tr>
+          <td>
+
+            <div class="columns"> 
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (Unitree G1)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/g1_cart_pulling_unmask_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Cart-Pulling (Booster T1)</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/t1_cart_pulling_praj_unmask_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+
+            <div class="columns">
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Heavy-Lifting</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/heavy_lifting_mask_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Adaptive Heavy-Lifting</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/adaptive_heavy_lifting_unmask.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+
+            <div class="columns">
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Payloads-Transporting</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/handover_unmask.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Stance-Pulling</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/stance_pulling_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+
+            <div class="columns">
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Tug-of-War: Round 1</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/tugofwar_1_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+              <div class="column has-text-centered">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Tug-of-War: Round 2</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/tugofwar_2_h264.mp4" width="100%" style="border-radius:10px;"></video>
+              </div>
+            </div>
+            <br>
+
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Navigation information serves as a critical component in end-to-end autonomous driving systems, providing essential decision-making references for planner. However, our experimental results reveal that many existing end-to-end autonomous driving systems may not adequately comprehend navigation information, consequently failing to execute appropriate planning based on navigation information. To overcome this limitation, we propose a Sequential Navigation Guidance (SNG) framework, which is designed based on real-world navigation patterns. The SNG incorporates both a navigation path to constrain long-term trajectories and Turn-by-Turn (TBT) information for real-time decision logic. We also introduce an efficient and streamlined model that achieves state-of-the-art (SOTA) performance solely through the accurate modeling of navigation information, without requiring auxiliary loss functions from perception tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">
+          Carla Simulation Demos
+        </h2>
+        <!-- <p class="content is-medium" style="text-align: center; padding-bottom: 20px;">
+          We compare the real-world performance of <strong style="color: #13c253; font-weight: 800;">FALCON</strong> with a <strong style="color: #e63946; font-weight: 800;">baseline</strong> that uses <em>RL for low-body locomotion and IK for upper-body manipulation w/o any force curriculum</em>, on the following three tasks: <b>Door-Opening</b>, <b>Cart-Pulling</b>, and <b>Heavy-Lifting</b>.
+        </p>         -->
+        <tr>
+          <td>
+            <div class="columns"> 
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Yielding to Cut-in Vehicle</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/​Clip1_​YieldingToCutInVehicle​.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(255, 114, 112);"></video>
+              </div>
+              <div class="column">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;">Unprotected Left Turn</h3>
+                <video autoplay muted loop playsinline controls preload="auto" src="./static/videos/Clip2_UnprotectedLeftTurn.mp4" width="100%" style="border-radius:10px; border: 5px solid rgb(134, 236, 137);"></video>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Method</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            Our method consists of two parts: Sequential navigation guidance and model. Sequential navigation guidance consists of navigation path and TBT information. The full pipeline of our model is divided into two phases: the multimodal feature fusion encoder and the transformer backbone of LLM.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <h2 class="title is-4" style="text-align: center;">Training Framework</h2> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-thirds">
+        <div class="content has-text-justified">
+          <!-- <ol type="a">
+            There are two steps within the <span class="method" style="color: darkred;">FALCON</span> framework:
+              <ol>
+                <li><strong>Two-Agent Joint Training with Whole-Body Proprioception</strong>:  <br>Two agents, each assigned distinct sub-tasks, are jointly trained using shared whole-body proprioception signals. During training, randomized 3D external forces—bounded by the upper-body joint torque limits—are applied to the end-effectors to encourage robust coordination;</li>
+                <li><strong>External Disturbance Handling via Force Perturbation</strong><br> The agents learn to maintain task performance under force perturbations, developing complementary behaviors to counteract disturbances and achieve stable loco-manipulation.</li>
+              </ol> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifth has-text-centered">
+        <img src="./static/images/Navigation-pipeline.jpg" alt="" style="width: 90%;" />
+      </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Effectiveness of Navigation Information</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            We demonstrate the impact of introducing noise to the driving command on the predicted trajectory during the inference process of the Transfuser. The scenario involved an open intersection without traffic lights.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifth has-text-centered">
+        <!-- <img src="./static/images/cmd_ablation.jpg" alt="" style="width: 60%;" /> -->
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+            <img src="./static/images/teaser.jpg" alt="Teaser Image" style="height: 400px; width: auto; object-fit: contain;" />
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="./static/images/cmd_ablation.jpg" alt="Command Ablation Study" style="height: 400px; width: auto; object-fit: contain;" />
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">More Experiments Results</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            TODO
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>TODO</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> and <a href="https://umi-on-legs.github.io"><span class="dnerf">UMI-On-Legs</span></a>.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
